@@ -1,0 +1,86 @@
+THIS ONE IS ANOTHER SAMPLE TEST CASE BY SELF
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[]={5,3,2,3,2,7,7};
+    int i=0,j=i+1,size=5;
+    int k=i,l=j;
+    
+    
+    
+    while(l<size){
+        
+            if(arr[i]!=arr[l]){
+                l++;
+            }
+            if(arr[i]==arr[l]){
+                arr[i]=arr[l]=0;
+                i++,j++,l=j;
+            }
+            if(arr[i]==0){
+                i++,j++,l=j;
+            }
+            
+    }
+    if(l>=size){   //if(l>=(size-1))
+        cout<< arr[i] << endl;
+        goto end;
+    }
+ 
+   
+    
+    for(int i=0;i<size;i++){
+        if(arr[i]!=0){
+           cout<<arr[i]<<endl;
+        }
+    }
+    end:
+        cout<< "outside" <<endl;
+        return 0;
+}
+    
+*****************************************************************
+ACTUAL QUESTRION IS THIS ONE....
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[]={5,3,2,3,2};
+    int i=0,j=i+1,size=5;
+    int k=i,l=j;
+    
+    
+    
+    while(l<size){
+        
+            if(arr[i]!=arr[l]){
+                l++;
+            }
+            if(arr[i]==arr[l]){
+                arr[i]=arr[l]=0;
+                i++,j++,l=j;
+            }
+            
+    }
+    if(l>=size){   //if(l>=(size-1))
+        cout<< arr[i] << endl;
+        goto end;
+    }
+ 
+   
+    
+    for(int i=0;i<size;i++){
+        if(arr[i]!=0){
+           cout<<arr[i]<<endl;
+        }
+    }
+    end:
+        cout<< "outside" <<endl;
+        return 0;
+}
+    
+    
