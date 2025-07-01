@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int find(int arr[],int size,int sum){
+    
+    int i=1,j=i+1;
+    int k=i,l=j,n=1;
+    int arr2[n],sum2=arr[i];
+    
+    while(sum2<sum || j<size){
+             
+             sum2=sum2+arr[l];
+            
+             if(sum2!=sum  && sum2<sum){
+                 l++;
+             }
+             else if(sum2!=sum && sum2>sum){
+                 i++,j++;
+                 k=i;
+                 l=j;
+                 sum2=arr[i];
+             }
+             else if(sum2==sum){
+                
+                 arr2[n]=i;
+                 i++,j++;
+                 l=j;
+                 sum2=arr[i];
+                 
+                 n++;
+             }
+             else{
+                 return 0;
+             }
+             
+    }
+        
+    for(int i=1;i<=2;i++){
+        cout<<arr2[i]<<endl;
+    }
+    
+    
+    return 0;
+   
+}
+
+
+int main() {
+    int arr[]={1,2,3,7,5};
+    int sum=12;
+    
+    find(arr,5,sum);
+   
+    
+
+    return 0;
+}
