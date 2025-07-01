@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int arr[]={1,2,3,5,2};
+    int n=5,sum=100;
+    
+    int size=n-1;
+    int i=0,j=i+1;
+    int k=i,l=j;
+    int sum2=arr[i];
+
+
+    
+    while(sum2<sum && j<=size && l<=size){
+             
+             sum2=sum2+arr[l];
+            
+             if(sum2!=sum  && sum2<sum){
+                 l++;
+             }
+             else if(sum2!=sum && sum2>sum){
+                 i++,j++;
+                 k=i;
+                 l=j;
+                 sum2=arr[i];
+             }
+             else if(sum2==sum){
+                cout << sum2 << endl;
+                cout << "true" <<endl;
+                return 0;
+                 
+             }
+             else{//not necesarry
+                cout << "false" <<endl;
+                return 0;
+             }
+             
+    }
+     cout << "outside loop" <<endl;
+    
+    return 0;
+
+}
